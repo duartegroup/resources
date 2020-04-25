@@ -5,7 +5,7 @@ Computational chemistry requires a knowledge of command line interfaces
 software packages), using high performance computing resources and scripting common actions all require using a CLI.
 
 This introduction should provides a very brief guide to using a CLI in  a Unix environment, specifically
-[bash](https://en.wikipedia.org/wiki/Bash_(Unix_shell) which is perhaps the most commonly used shell. Non-Unix
+[bash](https://en.wikipedia.org/wiki/Bash_(Unix_shell)) which is perhaps the most commonly used shell. Non-Unix
 shells like [Windows PowerShell](https://en.wikipedia.org/wiki/PowerShell) work in much the same way, but as most
 compute clusters are generally Linux-based we'll stick to bash.
 
