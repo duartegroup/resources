@@ -9,19 +9,19 @@ ys = np.array([0.23533653, -0.31035679, 0.45911638, 0.31506996, -0.29502177,
 
 
 def print_function_error(function, params):
-    """Print the loss of a trial function fitting some data"""
-    return print(f'|f(x) - y|    =    '
+    """Print the loss of a trial function fitting some data. |f(x) - y| """
+    return print('Error(f)  =  '
                  f'{np.linalg.norm(function(xs, params) - ys):.5f}')
 
 
 def print_weight_error(params):
-    """Print the difference between the true and trial polynomial weights,
-    as the sum of the squares """
+    """Print the difference between the true and trial polynomial coeffs,
+    as the sum of the squares. |SS_true - SS_f|"""
 
     true_ss_w = 11.230715512200469
     ss_w = np.sum(np.square(np.array(params)))
 
-    return print(f'|SS_true - SS_f| = {np.abs(true_ss_w - ss_w):.5f}')
+    return print(f'Error(c)  =  {np.abs(true_ss_w - ss_w):.5f}')
 
 
 def plot(function, params):
