@@ -13,7 +13,7 @@ This tutorial will require a familiarity with shells e.g. bash, and both a git &
 
 
 |          |     Mac   |  Windows    |   Linux   |
-|  :----:  |  :----:  |    :----:    |    :----: |
+|  :----:  |  :----  |    :----    |    :---- |
 | git      |    n/a      |     Install [WSL](https://docs.microsoft.com/en-us/windows/wsl/)         |     n/a      | 
 | Python   |  `wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh && bash miniconda.sh`      |     Within WSL: `wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh && bash miniconda.sh`         |    `wget https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-x86_64.sh -O miniconda.sh && bash miniconda.sh`    |
 
@@ -36,8 +36,8 @@ and sign in with your GitHub account.
 The goal with this example will be to work together to solve a toy _research_ problem. Specifically, for a set of data 
 points, what is the best fitting function? The true function and sample points (squares) are shown below.
 
-![alt text](_common/true_function.png)
 
+<img src="_common/true_function.png" width="400">
 
 The sample points are:
 
