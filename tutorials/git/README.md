@@ -55,20 +55,61 @@ It's on this copy that changes will be made that can then be added to the [base 
 
 #### 1. Cloning
 
-With GitKraken installed there are two ways to clone a repository either on the command line:
+Open GitKraken and clone your newly created fork with Clone → GitHub.com → 
+Select appropriate repository → Clone the repo! 
 
-```bash
-git clone https://github.com/duartegroup/resources.git
-```
+> **_NOTE:_**  You'll need to be logged into GitHub in GitKraken for this to work!
 
-or through the GitKraken GUI with Clone → GitHub.com → Select appropriate repository → Clone the repo! 
 
 #### 2. Making Changes
 
 Finally, we're now ready to make some progress in solving the toy problem. Open up `fit_function.py` with your favourite 
 text editor or IDE. Modify the trial function declaration to try and minimise the difference between your guess and 
-the true values, subject to some simple regularisation. The 
+the true values, subject to some simple regularisation. A simple trial function is defined
+
+```python
+
+def function(x, c):
+    """
+    Example function:  y = c_0 x^2
+    ...
+    """
+    return c[0] * x**2
+```
+
+where `c` is a list of parameters of the function. **The true function is a polynomial** so the parameters are just
+a set of coefficients. Running the script (`python fit_function.py`) will plot the trial function over the sample data 
+and print the errors e.g. for c_0 = 0.5:
+
+```bash
+Error(f)  =  2.01524
+Error(c)  =  10.98072
+```
+
+#### 3. Committing
+
+Once you've made a change that improves the errors **commit* the changes. Return to GitKraken and 1. Stage the changes, 
+2. Write a commit message (e.g. "Reduces error on function") and 3. Hit Commit changes. Each commit provides a snapshot
+of the current state which can be reverted to at any time. A good rule of thumb is to commit anything that feels like it
+could be summarised in a single sentence.
+
+#### 3. Pushing
+
+With committed changes on your local copy of the repository you can now **push** them to the remote (GitHub) by, in 
+GitKraken, hitting `Push` (top middle). The new changes should now be visible on your GitHub profile homepage.
 
 
+#### 4. Pull Requests
+
+With pushed changes to a remote we can now create a **pull request** (PR) into the base _duartegroup_ repository. To 
+do so, navigate to the `Pull requests` tab on [GitHub](https://github.com/duartegroup/resources) and open a PR from your
+fork to the base repository.
+
+Opening a PR will notify the maintainer of the repository that there are changes that you would like to contribute 
+to the main (base) repository. When opening a PR it's useful to add what the purpose is, and in this case some data to 
+support that here the values of the errors will be important!
 
 
+#### 5. Rebasing
+
+**TODO**
