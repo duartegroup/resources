@@ -37,7 +37,7 @@ The goal with this example will be to work together to solve a toy _research_ pr
 points, what is the best fitting function? The true function and sample points (squares) are shown below.
 
 
-<img src="_common/true_function.png" width="400">
+<img src="_common/true_function.png" width="500">
 
 The sample points are:
 
@@ -46,12 +46,16 @@ xs = [ 0.21121121, -0.4034034,  0.39139139, 0.78578579, -0.55155155, 0.56556557,
 ys = [ 0.23533653, -0.31035679, 0.45911638, 0.31506996, -0.29502177, 0.60401143, -0.50146046, -0.04222024, -0.82460688, 1.27242725]
 ```
 
+***
+
 #### 0. Forking
 
 To get started **fork** this repository, aka. create a copy ('clone') of it that is now associated with your GitHub 
 account. On this page hit the `Fork` button in the top right and fork it to your account.
 
 It's on this copy that changes will be made that can then be added to the [base repository](https://github.com/duartegroup/resources).
+
+***
 
 #### 1. Cloning
 
@@ -60,6 +64,7 @@ Select appropriate repository → Clone the repo!
 
 > **_NOTE:_**  You'll need to be logged into GitHub in GitKraken for this to work!
 
+***
 
 #### 2. Making Changes
 
@@ -86,6 +91,8 @@ Error(f)  =  2.01524
 Error(c)  =  10.98072
 ```
 
+***
+
 #### 3. Committing
 
 Once you've made a change that improves the errors **commit* the changes. Return to GitKraken and 1. Stage the changes, 
@@ -93,13 +100,16 @@ Once you've made a change that improves the errors **commit* the changes. Return
 of the current state which can be reverted to at any time. A good rule of thumb is to commit anything that feels like it
 could be summarised in a single sentence.
 
-#### 3. Pushing
+***
+
+#### 4. Pushing
 
 With committed changes on your local copy of the repository you can now **push** them to the remote (GitHub) by, in 
 GitKraken, hitting `Push` (top middle). The new changes should now be visible on your GitHub profile homepage.
 
+***
 
-#### 4. Pull Requests
+#### 5. Pull Requests
 
 With pushed changes to a remote we can now create a **pull request** (PR) into the base _duartegroup_ repository. To 
 do so, navigate to the `Pull requests` tab on [GitHub](https://github.com/duartegroup/resources) and open a PR from your
@@ -109,7 +119,8 @@ Opening a PR will notify the maintainer of the repository that there are changes
 to the main (base) repository. When opening a PR it's useful to add what the purpose is, and in this case some data to 
 support that here the values of the errors will be important!
 
+***
 
-#### 5. Rebasing
+#### 6. Rebasing
 
 **TODO**
