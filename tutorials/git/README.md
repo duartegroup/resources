@@ -5,6 +5,8 @@
 The goal of this tutorial is to become familiar with some (of the vast) **git** functionality. It will cover the basics 
 of version controlling and contributing to projects on GitHub. 
 
+***
+
 ### Prerequisites
 
 #### git + Python
@@ -30,6 +32,8 @@ conda install numpy matplotlib -c conda-forge
 To interact with `git` using a graphical user interface (GUI) we'll be using GitKraken - download it [here](https://www.gitkraken.com/)
 and sign in with your GitHub account.
 
+
+***
 
 ### git by Example
 
