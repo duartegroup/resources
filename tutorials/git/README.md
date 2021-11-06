@@ -99,7 +99,7 @@ Error(c)  =  10.98072
 
 #### 3. Committing
 
-Once you've made a change that improves the errors **commit* the changes. Return to GitKraken and 1. Stage the changes, 
+Once you've made a change that improves the errors **commit** the changes. Return to GitKraken and 1. Stage the changes, 
 2. Write a commit message (e.g. "Reduces error on function") and 3. Hit Commit changes. Each commit provides a snapshot
 of the current state which can be reverted to at any time. A good rule of thumb is to commit anything that feels like it
 could be summarised in a single sentence.
