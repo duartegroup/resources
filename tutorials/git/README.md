@@ -54,7 +54,7 @@ ys = [ 0.23533653, -0.31035679, 0.45911638, 0.31506996, -0.29502177, 0.60401143,
 
 #### 0. Forking
 
-To get started **fork** this repository, aka. create a copy ('clone') of it that is now associated with your GitHub 
+To get started **fork** this repository. This will create a copy that is now associated with your GitHub 
 account. On this page hit the `Fork` button in the top right and fork it to your account.
 
 It's on this copy that changes will be made that can then be added to the [base repository](https://github.com/duartegroup/resources).
@@ -66,13 +66,15 @@ It's on this copy that changes will be made that can then be added to the [base 
 Open GitKraken and clone your newly created fork with Clone → GitHub.com → 
 Select appropriate repository → Clone the repo! 
 
+Be sure to select your fork of the repository, rather than the one on the _duartegroup_ organisation.
+
 > **_NOTE:_**  You'll need to be logged into GitHub in GitKraken for this to work!
 
 ***
 
 #### 2. Making Changes
 
-Finally, we're now ready to make some progress in solving the toy problem. Open up `fit_function.py` with your favourite 
+We're now ready to make some progress in solving the toy problem. Open up `fit_function.py` with your favourite 
 text editor or IDE. Modify the trial function declaration to try and minimise the difference between your guess and 
 the true values, subject to some simple regularisation. A simple trial function is defined
 
@@ -86,9 +88,9 @@ def function(x, c):
     return c[0] * x**2
 ```
 
-where `c` is a list of parameters of the function. **The true function is a polynomial** so the parameters are just
+where `c` is a list of parameters of the function. **The true function is a polynomial**, so the parameters are just
 a set of coefficients. Running the script (`python fit_function.py`) will plot the trial function over the sample data 
-and print the errors e.g. for c_0 = 0.5:
+and print the errors e.g. for x^2/2 as the trial function:
 
 ```bash
 Error(f)  =  2.01524
@@ -99,8 +101,8 @@ Error(c)  =  10.98072
 
 #### 3. Committing
 
-Once you've made a change that improves the errors **commit** the changes. Return to GitKraken and 1. Stage the changes, 
-2. Write a commit message (e.g. "Reduces error on function") and 3. Hit Commit changes. Each commit provides a snapshot
+Once you've made a change that improves the errors, **commit** the changes. Return to GitKraken and 1. Stage the changes, 
+2. Write a commit message (e.g. "Reduces error on data") and 3. Hit Commit changes. Each commit provides a snapshot
 of the current state which can be reverted to at any time. A good rule of thumb is to commit anything that feels like it
 could be summarised in a single sentence.
 
@@ -120,11 +122,17 @@ do so, navigate to the `Pull requests` tab on [GitHub](https://github.com/duarte
 fork to the base repository.
 
 Opening a PR will notify the maintainer of the repository that there are changes that you would like to contribute 
-to the main (base) repository. When opening a PR it's useful to add what the purpose is, and in this case some data to 
-support that here the values of the errors will be important!
+to the main (base) repository. When opening a PR it's useful to add what the purpose is, and some supporting data 
+(i.e. here the value of the errors)
 
 ***
 
 #### 6. Rebasing
 
-**TODO**
+If there have been edits elsewhere in the code between you forking the repository and opening the PR these 
+will need to be incorporated into your version of the code before a PR can be merged. The easiest way to 
+do this is to `rebase` your fork onto the base master branch. 
+
+In GitKraken hit the '+' button while hovering over REMOTE on the left-hand side then add the duatregroup
+version of the repository as an additional remote. You should now see a new branch, which you can drag and
+drop your local master branch onto, then select Rebase onto master.
