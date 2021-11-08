@@ -2,8 +2,10 @@
 
 ### Outline
 
-The goal of this tutorial is to become familiar with some (of the vast) **git** functionality. It will cover the basics 
-of version controlling and contributing to projects on GitHub. 
+The goal of this tutorial is to become familiar with some (of the vast) [git](https://en.wikipedia.org/wiki/Git) 
+functionality. It will cover the basics of version controlling and contributing to projects on GitHub. 
+GitHub is a 'remote' host for projects (aka. repositories) that are version controlled with the `git` software.
+
 
 ***
 
@@ -21,7 +23,7 @@ This tutorial will require a familiarity with shells e.g. bash, and both a git &
 
 #### Python dependencies
 
-Once Python is installed, add a couple of common Python packages (if they're not already installed)
+Once Python is installed, install numpy and matplotlib, if they're not already installed
 
 ```bash
 conda install numpy matplotlib -c conda-forge
@@ -58,6 +60,8 @@ To get started **fork** this repository. This will create a copy that is now ass
 account. On this page hit the `Fork` button in the top right and fork it to your account.
 
 It's on this copy that changes will be made that can then be added to the [base repository](https://github.com/duartegroup/resources).
+Note an alternative to forking a repository is to just clone then create a new `branch` from the master branch. However, for most 
+repositories you may not have push privileges and will need to work on a fork.
 
 ***
 
@@ -75,8 +79,9 @@ Be sure to select your fork of the repository, rather than the one on the _duart
 #### 2. Making Changes
 
 We're now ready to make some progress in solving the toy problem. Open up `fit_function.py` with your favourite 
-text editor or IDE. Modify the trial function declaration to try and minimise the difference between your guess and 
-the true values, subject to some simple regularisation. A simple trial function is defined
+text editor (e.g. vim) or IDE (e.g. PyCharm). Modify the trial function declaration to try and minimise the 
+difference between your guess and the true values, subject to some simple regularisation. A simple trial 
+function is defined
 
 ```python
 
@@ -117,7 +122,7 @@ GitKraken, hitting `Push` (top middle). The new changes should now be visible on
 
 #### 5. Pull Requests
 
-With pushed changes to a remote we can now create a **pull request** (PR) into the base _duartegroup_ repository. To 
+With pushed commits to a remote repository, we can now create a **pull request** (PR) into the base _duartegroup_ repository. To 
 do so, navigate to the `Pull requests` tab on [GitHub](https://github.com/duartegroup/resources) and open a PR from your
 fork to the base repository.
 
@@ -129,10 +134,46 @@ to the main (base) repository. When opening a PR it's useful to add what the pur
 
 #### 6. Rebasing
 
-If there have been edits elsewhere in the code between you forking the repository and opening the PR these 
-will need to be incorporated into your version of the code before a PR can be merged. The easiest way to 
-do this is to `rebase` your fork onto the base master branch. 
+If there have been edits elsewhere in the code by other people in between you forking the repository and opening the PR these 
+will need to be incorporated into your version of the code before a PR can be merged. The easiest way to do this is to `rebase`
+your fork onto the base master branch.
 
 In GitKraken hit the '+' button while hovering over REMOTE on the left-hand side then add the duatregroup
 version of the repository as an additional remote. You should now see a new branch, which you can drag and
 drop your local master branch onto, then select Rebase onto master.
+
+***
+
+## Glossary
+
+Some terms that weren't covered in this tutorial but still might be useful:
+
+#### 0. Squash
+
+A set of commits may be `squashed` into a single commit, either in merging a PR or directly on a branch. This is useful
+to clean up a commit history; for example several commits fixing typos should be squashed. Often in projects PRs will be
+merged using a `squash` then commit, to keep the history clean.
+
+#### 1. Pull
+
+Like `reabse`, pull gets the latest changes on a particular branch. For example, if two people are working on the same 
+branch then each time there is a commit from the other person you should `pull` on the branch.
+
+#### 2. Stash
+
+If you have changes that you don't want to commit but also don't want to delete they can be `stashed`, and a different 
+branch of the repo safely changed to. If those uncommitted changes weren't stashed they will be deleted if you change 
+branch!
+                                             
+#### 3. Pop
+
+`Pop` is the reverse of stash and applies a set of stashed changes.
+
+#### 4. Set Upstream
+
+In order to `push` to a remote there need to be a `upstream` branch for it to push to. To `set upstream` just means to
+define a remote branch for a local branch. GitKraken should prompt you to make a new upstream branch if one is not aleady
+present, but you may need to set one manually to prevent pushing to master (usually very bad).
+
+
+
