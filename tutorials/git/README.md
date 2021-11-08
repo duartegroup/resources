@@ -1,11 +1,15 @@
 # git Tutorial
 
 ### Outline
+ 
+The main purpose of [git](https://en.wikipedia.org/wiki/Git) is to be able to version and
+work on code with others. GitHub is a place for 'remote' repositories and is useful for 
+making code easily readable for others and to enable simple collaboration on code.
 
-The goal of this tutorial is to become familiar with some (of the vast) [git](https://en.wikipedia.org/wiki/Git) 
+The goal of this tutorial is to become familiar with some (of the vast) git 
 functionality. It will cover the basics of version controlling and contributing to projects on GitHub. 
 GitHub is a 'remote' host for projects (aka. repositories) that are version controlled with the `git` software.
-
+                                                                          
 
 ***
 
