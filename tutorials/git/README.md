@@ -156,7 +156,7 @@ merged using a `squash` then commit, to keep the history clean.
 
 #### 1. Pull
 
-Like `reabse`, pull gets the latest changes on a particular branch. For example, if two people are working on the same 
+Like `rebase`, pull gets the latest changes on a particular branch. For example, if two people are working on the same 
 branch then each time there is a commit from the other person you should `pull` on the branch.
 
 #### 2. Stash
@@ -171,7 +171,7 @@ branch!
 
 #### 4. Set Upstream
 
-In order to `push` to a remote there need to be a `upstream` branch for it to push to. To `set upstream` just means to
+In order to `push` to a remote there needs to be an `upstream` branch for it to push to. To `set upstream` just means to
 define a remote branch for a local branch. GitKraken should prompt you to make a new upstream branch if one is not aleady
 present, but you may need to set one manually to prevent pushing to master (usually very bad).
 
