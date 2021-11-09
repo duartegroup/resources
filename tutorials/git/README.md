@@ -71,10 +71,11 @@ repositories you may not have push privileges and will need to work on a fork.
 
 #### 1. Cloning
 
-Open GitKraken and clone your newly created fork with Clone → GitHub.com → 
+Open GitKraken and clone your newly created fork with Clone a repo → GitHub.com → 
 Select appropriate repository → Clone the repo! 
 
-Be sure to select your fork of the repository, rather than the one on the _duartegroup_ organisation.
+First select a folder to clone the repository to (e.g. /Users/name/repositories/) and be sure to select your fork of the 
+repository, rather than the one on the _duartegroup_ organisation.
 
 > **_NOTE:_**  You'll need to be logged into GitHub in GitKraken for this to work!
 
@@ -82,10 +83,10 @@ Be sure to select your fork of the repository, rather than the one on the _duart
 
 #### 2. Making Changes
 
-We're now ready to make some progress in solving the toy problem. Open up `fit_function.py` with your favourite 
-text editor (e.g. vim) or IDE (e.g. PyCharm). Modify the trial function declaration to try and minimise the 
-difference between your guess and the true values, subject to some simple regularisation. A simple trial 
-function is defined
+We're now ready to make some progress in solving the toy problem. Open up `fit_function.py` (in the newly created
+resources directory wherever you cloned to) with your favourite text editor (e.g. vim) or IDE (e.g. PyCharm). 
+Modify the trial function declaration to try and minimise the difference between your guess and the true values,
+subject to some simple regularisation. A simple trial function is defined
 
 ```python
 
@@ -99,7 +100,7 @@ def function(x, c):
 
 where `c` is a list of parameters of the function. **The true function is a polynomial**, so the parameters are just
 a set of coefficients. Running the script (`python fit_function.py`) will plot the trial function over the sample data 
-and print the errors e.g. for x^2/2 as the trial function:
+(generating _function.png_) and print the errors e.g. for x^2/2 as the trial function:
 
 ```bash
 Error(f)  =  2.01524
