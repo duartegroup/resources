@@ -8,6 +8,11 @@ ys = np.array([0.23533653, -0.31035679, 0.45911638, 0.31506996, -0.29502177,
                0.60401143, -0.50146046, -0.04222024, -0.82460688, 1.27242725])
 
 
+def sum_square_error(params, function):
+    """Compute the sum of squares error to enable least squares fitting"""
+    return np.sum(np.square(function(xs, params) - ys))
+
+
 def print_function_error(function, params):
     """Print the loss of a trial function fitting some data. |f(x) - y| """
     return print('Error(f)  =  '

@@ -107,6 +107,9 @@ Error(f)  =  2.01524
 Error(c)  =  10.98072
 ```
 
+If there's time, install Scipy (`conda install scipy -c conda-forge`) and use scipy.optimize.minimize to optimise 
+the coefficients to convergence.
+
 ***
 
 #### 3. Committing
