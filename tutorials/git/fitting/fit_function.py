@@ -3,7 +3,7 @@ from helper_functions import print_function_error, print_weight_error, plot
 
 def function(x, c):
     """
-    Example function:  y = c_0 x^2
+    Example function:  y = c_0 x + c_1 * x^2
 
     ----------------------------------------------------------------
     Arguments:
@@ -14,7 +14,7 @@ def function(x, c):
     Returns:
         (np.ndarray): Value(s) of the function
     """
-    return c[0] * x**2
+    return c[0] * x + c[1] * x**2
 
 
 if __name__ == '__main__':
