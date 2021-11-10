@@ -14,12 +14,12 @@ def function(x, c):
     Returns:
         (np.ndarray): Value(s) of the function
     """
-    return c[0] * x + c[0] * x**2
+    return c[0] * x + c[1] * x**2 + c[2] * x**5
 
 
 if __name__ == '__main__':
 
-    coefficients = [1.0, 0.5]
+    coefficients = [1.0, 0.5, -3]
 
     # Print the difference between the predicted & true function on the data
     print_function_error(function, coefficients)
