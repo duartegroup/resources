@@ -3,7 +3,7 @@ from helper_functions import print_function_error, print_weight_error, plot
 
 def function(x, c):
     """
-    Example function:  y = c_0 x^2
+    Example function:  y = c_0 x + c_1 x^2
 
     ----------------------------------------------------------------
     Arguments:
@@ -19,7 +19,7 @@ def function(x, c):
 
 if __name__ == '__main__':
 
-    coefficients = [0.5]
+    coefficients = [1.0, 0.5]
 
     # Print the difference between the predicted & true function on the data
     print_function_error(function, coefficients)
