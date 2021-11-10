@@ -146,7 +146,7 @@ If there have been edits elsewhere in the code by other people in between you fo
 will need to be incorporated into your version of the code before a PR can be merged. The easiest way to do this is to `rebase`
 your fork onto the base master branch.
 
-In GitKraken hit the '+' button while hovering over REMOTE on the left-hand side then add the duatregroup
+In GitKraken hit the '+' button while hovering over REMOTE on the left-hand side then add the duartegroup
 version of the repository as an additional remote. You should now see a new branch, which you can drag and
 drop your local master branch onto, then select Rebase onto master.
 
