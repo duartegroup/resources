@@ -14,7 +14,7 @@ def function(x, c):
     Returns:
         (np.ndarray): Value(s) of the function
     """
-    return c[0] * x**2
+    return c[0] * x * x**2
 
 
 if __name__ == '__main__':
