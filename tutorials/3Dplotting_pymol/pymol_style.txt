@@ -1,0 +1,97 @@
+#-------Structure settings----------
+
+bg_color white
+set depth_cue=1
+set ray_trace_fog=1
+
+show spheres
+set sphere_scale, 0.18
+
+set_color mred = [1.00, 0.40, 0.40]
+color white, elem H
+color mred, elem O
+
+show sticks
+set stick_radius, 0.07
+set stick_h_scale, 0.8
+set stick_color, black
+
+
+#-------Create a dashed line for the H bond between H and O-------
+
+dist d1, o1, h1
+hide labels
+
+set dash_radius, 0.05
+set dash_gap, 0.2
+set dash_color, black
+hide labels
+
+#-------Copy the following text to plot the orbitals-------
+
+# HOMO orbital isosurface
+isosurface pos_homo, water_dimer_homo, 0.1
+set surface_color, red, pos_homo
+isosurface neg_homo, water_dimer_homo, -0.1
+set surface_color, blue, neg_homo
+set transparency, 0.3
+
+# LUMO orbital isosurface
+isosurface pos_lumo, water_dimer_lumo, 0.1
+set surface_color, green, pos_lumo
+isosurface neg_lumo, water_dimer_lumo, -0.1
+set surface_color, gold, neg_lumo
+set transparency, 0.3
+
+#----------Save the figure as a png-------------------------
+
+# make figure 
+set ray_shadows,on 
+set ray_opaque_background, off
+ray 1000,1000
+png water_dimer_HOMO_LUMO, dpi=1600
+
+
+#----------Making NCI plots--------------------------------
+
+isosurface nci, rdg, 0.6
+ramp_new spectrum, lamb, [-0.01, 0, 0.01], [blue, green, red] 
+set surface_color, spectrum, nci
+set transparency, 0.4
+
+
+#----------Making ESP plots--------------------------------
+
+isosurface dens, water_dimer_density, 0.002
+ramp_new esp_spectrum, water_dimer_esp, [-0.05, 0, 0.05], [blue, green, red]
+set surface_color, esp_spectrum, dens
+set transparency, 0.4
+
+
+#-----------Electron density difference plots--------------
+
+isosurface oxidised_pos, water_dimer_oxidised-neutral, 0.01
+set surface_color, blue, oxidised_pos
+isosurface oxidised_neg, water_dimer_oxidised-neutral, -0.01
+set surface_color, red, oxidised_neg
+set transparency, 0.3
+
+isosurface reduced_pos, water_dimer_reduced-neutral, 0.01
+set surface_color, blue, reduced_pos
+isosurface reduced_neg, water_dimer_reduced-neutral, -0.01
+set surface_color, red, reduced_neg
+set transparency, 0.3
+
+
+#-------------Squared orbitals-----------------------------
+
+
+isosurface homo_sq_pos, water_dimer_homo_sq, 0.01
+set surface_color, red, homo_sq_pos
+set transparency, 0.3
+
+isosurface lumo_sq_pos, water_dimer_lumo_sq, 0.01
+set surface_color, blue, lumo_sq_pos
+set transparency, 0.3
+
+
